@@ -197,9 +197,10 @@ code{
 
 */
 
-/*img{
-  margin-left: 300px;
-}*/
+img{
+  display: block;
+  margin: auto;
+}
 
 h1.h1css{
   font-family: 'Courier New', Courier, monospace;
