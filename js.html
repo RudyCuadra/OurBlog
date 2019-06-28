@@ -129,17 +129,73 @@
                 <h3 id="h3Js6" class="">Js 6</h3>
                     <p>
                         <strong>let para variables, const para constantes</strong><br>
+
                     </p>
-                    <p id="aaed86f7-bbfb-4be1-bd4e-e9850abde0f0" class="">
-                        <mark class="highlight-red"><em>let </em></mark><mark class="highlight-red">para variables, </mark><mark class="highlight-red"><em>const </em></mark><mark class="highlight-red">para constantes</mark></p><p id="2466e689-aa1a-457a-80a5-2a619a8eadba" class="">Inclusión de las <strong>Variables de bloque</strong>, igual que como funcionan en otros lenguajes como C# o Java.</p><h2 id="h2Datosprimitivos" class="">Datos primitivos</h2><ul id="9fbf564b-4896-41bd-bfc9-e074a5d29221" class="bulleted-list"><li><strong>number</strong>: 1,2,105,3.14 ...<ul id="0d482ecc-96a6-4f6e-90bc-d539dcad0777" class="bulleted-list"><li>si inicias un número con 0, js interpretará que es un número octal</li></ul><ul id="c8613a90-c47b-4ca7-9d96-61d68d909666" class="bulleted-list"><li><em>NaN, </em>no es un número</li></ul><ul id="25886033-2871-4e71-8328-703d1334a102" class="bulleted-list"><li>+<em>Infinity,</em> infinitos positivos</li></ul><ul id="6e9850d0-1a99-4c97-a509-25fca22c4277" class="bulleted-list"><li>-<em>Infinity</em>, infinitos negativos</li></ul></li></ul><ul id="d392ca3d-782f-413e-9161-6b8142e22b18" class="bulleted-list"><li><strong>string</strong>: &#x27;a&#x27;, "one", &#x27;two&#x27; , &#x27;World Wide Web&#x27; ...</li></ul><ul id="438380ae-5185-4abb-a0d9-1e614fab2af3" class="bulleted-list"><li><strong>boolean</strong>: true / false</li></ul><ul id="2486ac94-2c1a-4a17-9654-4b27fb64f0cf" class="bulleted-list"><li><strong>undefined</strong>: absent or unknown value</li></ul><ul id="7937fa95-444d-414a-b37e-38cd9c75f9ac" class="bulleted-list"><li><strong>null</strong>: special keyword, meaning no value or empty. The difference from undefinedis that when a variable is null, it is still defined.</li></ul><p id="a3721a82-2a1a-4453-8fbe-00e0a9793620" class="">Todo lo que no se listo arriba es un <strong>objetct</strong></p><h2 id="h2Operadores" class="">Operadores</h2><p id="d7ff3b42-aa81-411f-b9ae-587f26cf1340" class=""><strong>Aritméticos binarios</strong></p><p id="c41bff96-04f9-493e-a80c-34c7f594588f" class="">+, - , /, *, % (modulo)</p><p id="a146ad26-bb6f-41a6-b6af-c379317a455f" class=""><strong>Unitarios</strong></p><p id="3bc8e9a9-8f06-4679-aa22-d308fee95a2b" class="">++, —, - </p><p id="857c3018-ef3b-4415-8887-5eabda3b6844" class="">sufijos, añade 1 al valor de la variable, regresa el valor antiguo</p><p id="18b7f8df-8111-4b58-817c-d64551ed5c34" class="">prefijo, añade 1 al valor de la variable, regresa el nuevo valor</p><p id="047b4585-840d-4e49-88ad-3ad918dc6200" class=""><strong>Variantes cortas</strong></p><p id="5efaf308-d52b-4b54-b02c-9a3849ca4e33" class="">+=, -=, *=, /=, %=</p><pre id="fb13bdd2-5119-47d6-b500-c1161b91661f" class="code"><code>a += 3; // equivalent to a = a + 3
-    a -= 2; // equivalent to a = a - 2
-    </code></pre><h2 id="h2Strings" class="">Strings</h2><p id="68f41533-93a6-44c4-a80a-02bccd15d91e" class="">Se declaran entre "" ó &#x27;&#x27;, si inicia con " debe terminar con ", igual en el caso de &#x27;</p><p id="bf89576b-5fe1-415a-99cf-47745f565e5e" class="">Se recomienda usar &#x27; porque:</p><ol id="6574761d-4470-404b-9dea-4e87f1a744bd" class="numbered-list" start="1"><li>"" es usado en html</li></ol><ol id="e0c9b529-37ec-4949-ad26-3a0730320986" class="numbered-list" start="2"><li>Debes presionar Shift para escribir "</li></ol><ol id="15c0c04c-5ffa-4d3b-a395-a478cf7a07c1" class="numbered-list" start="3"><li>Más fáciles de leer y escribir</li></ol><ol id="40298a50-55b8-4686-b96d-2f4cd138f9c2" class="numbered-list" start="4"><li>Para escribir htmll en js, &#x27; son más útiles</li></ol><p id="3b576998-dcae-40e1-acec-7cd65a998283" class=""><strong>Operaciones con cadenas</strong></p><ul id="455a8ba2-3681-45c8-8803-2ed125ade526" class="bulleted-list"><li>+ concatenar</li></ul><ul id="abcdcef5-4fdc-476b-80c5-90632648dee7" class="bulleted-list"><li>+= concatenar, funciona igual que con números</li></ul><ul id="1074e952-3b8a-403a-bece-247dde4ccb82" class="bulleted-list"><li><em>concat(), </em>concatenar</li></ul><ul id="5a5e11bf-7b23-44a0-ab49-99a444ddb42e" class="bulleted-list"><li>si se guarda un número en la cadena, Js lo convertirá a <em>number</em></li></ul><ul id="ddac8cca-fa08-4b57-bc54-b13e76cdb5a2" class="bulleted-list"><li>convertir número a cadena</li></ul><pre id="598c65bd-e9a9-45ca-a67a-5cb500bc9d2d" class="code"><code>var n = 1;
+                    <h2 id="h2Datosprimitivos" class="">Datos primitivos</h2>
+                    <p>
+                        <strong>Number: </strong> 1,2,105,3.14 ...<br>
+                        Si inicias con una n, JavaScript interpretará que es un número octal.<br>
+                        NaN, no es un número.<br>
+                        <strong>+Infinity</strong>, infinitos positivos<br>
+                        <strong>-Infinity</strong>, infinitos negativos<br>
+                        <strong>String:</strong> 'a'<br>
+                        <strong>string:</strong> 'a', "one", 'two' , 'World Wide Web' ...<br>
+                        <strong>boolean:</strong> true / false<br>
+                        <strong>undefined:</strong> No existe o valor desconocido<br>
+                        <strong>null:</strong> Sin valor o vacío, la diferencia con undefined es que cuando una variable es null, realmente está definida<br><br>
+
+                        Todo lo que no se listo arriba es un<strong> Objeto</strong>
+                    </p>
+
+            <h2 id="h2Operadores">Operadores</h2>
+                <p>
+                    <strong>Aritméticos binarios<br></strong>
+                    +, - , /, *, % (módulo)<br>
+                    <strong>Unitarios<br></strong>
+                    ++, —, -<br>
+                    <strong>Sufijo</strong>, añade 1 al valor de la variable, regresa el valor antiguo<br>
+                    <strong>Prefijo</strong>, añade 1 al valor de la variable, regresa el mismo valor
+                    <pre class="codejs">
+                        <code>
+    a += 3; // equivale a = a + 3
+    a -= 2; // equivale a = a - 2
+                        </code>
+                    </pre>
+                </p>
+            
+            <h2 id="h2Strings" class="">Strings</h2>
+                <p>
+                    Se declaran entre "" ó '', si inicia con " debe terminar con ", igual en el caso de ', es recomendado usar ' porque:
+                    <ul>
+                        <li>"" es usado en html</li>
+                        <li>Debes presionar Shift para escribir "</li>
+                        <li>Más fáciles de leer y escribir</li>
+                        <li>Para escribir htmll en js, ' son más útiles</li>
+                    </ul>
+                    <br>
+                    <strong>Operaciones con cadenas</strong>
+                    <ul>
+                        <li>+ concatenar</li>
+                        <li>+= concatenar, funciona igual que con números</li>
+                        <li>concat(), concatenar</li>
+                        <li>si se guarda un número en la cadena, Js lo convertirá a number</li>
+                        <li>convertir número a cadena</li>
+                        <pre class="codejs">
+                            <code>
+    ar n = 1;
     typeof n;
     // returns "number"
     n = "" + n;
     // returns "1"
     typeof n;
-    // returns "string"</code></pre><h3 id="h3Escaparcaracteres" class="">Escapar caracteres</h3><ul id="63aff06f-1dd5-436f-94a3-beb8a5831274" class="bulleted-list"><li>para "escapar" carácteres</li></ul><pre id="6f157f2b-b538-40eb-84be-cba8f783e9a4" class="code"><code>var s = &#x27;I don\&#x27;t know&#x27;;
+    // returns "string"
+                            </code>
+                        </pre>
+                    </ul>
+                </p>
+            
+                <h3 id="h3Escaparcaracteres" class="">Escapar caracteres</h3>
+                <ul id="63aff06f-1dd5-436f-94a3-beb8a5831274" class="bulleted-list"><li>para "escapar" carácteres</li></ul><pre id="6f157f2b-b538-40eb-84be-cba8f783e9a4" class="code"><code>var s = &#x27;I don\&#x27;t know&#x27;;
     var s = "I don\&#x27;t know"; // here the \ is useless
     var s = "I don&#x27;t know";  // same result as previous line
     var s = &#x27;"Hello", he said.&#x27;; // ok, double quotes inside single one will be displayed
