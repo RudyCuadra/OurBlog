@@ -55,23 +55,23 @@
                         La especificación HTML refleja un esfuerzo, iniciado en 2004, 
                         para estudiar las implementaciones contemporáneas de HTML y el contenido web. La especificación:
                 </p>
-                        <ol>
+                        <ul>
                         <li>
                                 Define un solo lenguaje llamado HTML que 
                                 se puede escribir en sintaxis HTML y en sintaxis XML.</li>
-                        </ol>
-                        <ol>
+                        </ul>
+                        <ul>
                         <li>Define modelos de procesamiento detallados para fomentar implementaciones 
                                 interoperables.</li>
-                        </ol>
-                        <ol>
+                        </ul>
+                        <ul>
                         <li>Mejora el marcado de los documentos.</li>
-                                        </ol>
-                                        <ol>
+                                        </ul>
+                                        <ul>
                                         <li>Presenta el marcado y las API para los idiomas emergentes, como las 
                                                 aplicaciones web.
                                         </li>
-                                        </ol>
+                                        </ul>
                         <p>
                         ¿Qué es html5?
                         </p>
@@ -201,7 +201,7 @@
                                 en cada elemento de sección (&lt;section&gt;, &lt;article&gt;, &lt;nav&gt;, &lt;aside&gt;) y recordar 
                                 despues llamar al elemento raíz
                                 </p>
-                                <pre>
+                                <pre class="code cm-s-default CodeMirror" lang="java">
                                         <code>&lt;!DOCTYPE html&gt;
                         &lt;html lang=&quot;en&quot;&gt;
                         &lt;head&gt;
@@ -226,7 +226,7 @@
                 </figure>
                 <p>
                         </p>
-                        <ol>
+                        <ul>
                         <li>El elemento <strong>&lt;article&gt;</strong> 
                         se diseñó para partes independientes de un documento que eventualmente podría ser sindicado en flujos RSS.
                                 <p>
@@ -236,12 +236,12 @@
                                 que usted puede auditar.
                                 </p>
                         </li>
-                        </ol>
-                        <ol>
+                        </ul>
+                        <ul>
                                 <li>
                                         Los elementos <strong>&lt;section&gt; </strong>se utilizan para cortar una parte lógica en subpartes.
                                 </li>
-                                </ol>
+                                </ul>
                                 <p>
                                         Un &lt;article&gt; se puede cortar en diferentes elementos de &lt;section&gt;
                                 </p>
@@ -249,7 +249,7 @@
                         Ejemplo de una publicación de blog definida como un &lt;article&gt; largo , 
                         que a su vez se corta en elementos &lt;section&gt; más pequeños :
                         </p>
-                        <pre>
+                        <pre class="code cm-s-default CodeMirror" lang="java">
                         <code>
                                 &lt;!DOCTYPE html&gt;
                                 &lt;html lang=&quot;es&quot;&gt;
@@ -285,7 +285,7 @@
                         también podemos tener una &lt;section&gt; que agrupa todas las publicaciones 
                         del blog por mes, cada una de las cuales es un elemento &lt;article&gt; .
                         </p>
-                        <pre>
+                        <pre class="code cm-s-default CodeMirror" lang="java">
                         <code>
                                 &lt;!DOCTYPE html&gt;
                                 &lt;html lang=&quot;es&quot;&gt;
@@ -329,15 +329,15 @@
                         </p>
                         <p>
                         </p>
-                        <ol>
+                        <ul>
                         <li>Los navegadores de forma nativa o las extensiones de los navegadores, es decir, para generar automáticamente una tabla de contenido, una vista de esquema del documento, para aplicar
                         reglas de CSS predeterminadas a estos elementos, etc. Vea, por ejemplo, el esquema de HTML5 (extensión de Chrome). Más sobre eso
                         en la siguiente sección del curso.
                         </li>
-                        </ol>
-                        <ol>
+                        </ul>
+                        <ul>
                         <li>Web crawlers, etc.</li>
-                        </ol>
+                        </ul>
                         <p>
                         Puede usar los elementos &lt;div&gt; en todos los casos en los que los elementos
                         estructurales propuestos no se ajusten a sus necesidades: por ejemplo, para definir algunos contenidos que deberían tener 
@@ -375,7 +375,7 @@
                                 explícitamente utilizando elementos de contenido de la sección, o implícitos en el contenido del encabezado).
                                 Esto significa que:
                                 </p>
-                                <pre>
+                                <pre class="code cm-s-default CodeMirror" lang="java">
                                 <code>
                                         &lt;!DOCTYPE html&gt;
                                         &lt;html lang=&quot;es&quot;&gt;
@@ -400,7 +400,7 @@
                 <p>... 
                                 define el encabezado de una sección implícitamente , mientras que:
                         </p>
-                        <pre>
+                        <pre class="code cm-s-default CodeMirror" lang="java">
                                 <code>
                                         &lt;!DOCTYPE html&gt;
                         &lt;html lang=&quot;es&quot;&gt;
@@ -439,7 +439,7 @@
                         <p>
                                 Aclaremos esto mirando un código de ejemplo:
                         </p>
-                        <pre>
+                        <pre class="code cm-s-default CodeMirror" lang="java">
                                 <code>
                                         &lt;!DOCTYPE html&gt;
                         &lt;html lang=&quot;es&quot;&gt;
