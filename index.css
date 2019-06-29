@@ -227,5 +227,34 @@ pre{
   margin: 1em 0px;
 }
 
-/*CodePen*/
+/*Etiquetas de acerca de*/
+img.gerson{
+  width: auto;
+  max-height: 135px;
+}
 
+img.rudy{
+  width: auto;
+  max-height: 240px;
+}
+
+img.garache{
+  width: auto;
+  max-height: 135px;
+}
+
+h2.gerson{
+  text-align: left;
+  margin-left: 300px;
+}
+
+h2.garache{
+  text-align: center;
+  margin-left: 100px;
+  top: 50px;
+}
+
+h2.rudy{
+  text-align: right;
+  margin-right: 150px;
+}
