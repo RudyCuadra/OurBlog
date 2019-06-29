@@ -35,7 +35,7 @@
 					CSS significa &quot;Cascading Style Sheets&quot;. Un lenguaje de hojas de estilo para describir cómo 
 					mostrar un documento HTML.
 				</p>
-				<h1>Selectores</h1>
+				<h2>Selectores</h2>
 				<p>
 						Los selectores son indicadores de HTML que funcionan en CSS para cambiar sus propiedades y estilos, 
 						con el fin de mejorar su apariencia.
@@ -50,33 +50,31 @@
 						&quot;*&quot; , se usa para cambiar propiedades de todo los elementos en la página
 						&quot;body&quot; , se usa para cambiar el estilo de todos los elementos en el cuerpo
 				</p>
-					<pre>
+					<pre class="code cm-s-default CodeMirror" lang="java">
 						<code>
-							p {
-								/*estilo a párrafos*/
-							}
-							
-							a {
-								/*estilo a etiqueta específica*/
-							}
-							
-							* {
-								/*estilo a todos los elementos de la página*/
-							}
-							
-							body {
-								/*estilo para los elementos del cuerpo*/
-							}
+						<span>p {</span>
+						<span>/*estilo a párrafos*/</span>
+						<span>}</span>
+						<span>a {</span>
+						<span>/*estilo a etiqueta específica*/</span>
+						<span>}</span>					
+						<span>* {</span>
+						<span>/*estilo a todos los elementos de la página*/</span>
+						<span>}</span>		
+						<span>body {</span>
+						<span>/*estilo para los elementos del cuerpo*/</span>
+						<span>}</span>
 						</code>
 					</pre>
-				<h1>Estilo heredado</h1>
+				<h2>Estilo heredado</h2>
 				<p>Las etiquetas que contienen otras etiquetas son 
 						padres, y las etiquetas dentro de ellas son sus hijos en la estructura del script CSS, y por ende 
 						heredan el estilo y propiedades. A esto se le conoce como estilo heredado.
 				</p>
+				
 					<figure>
 						<div>
-							<a href="https://codepen.io/Garache10/pen/xoLPgY">https://codepen.io/Garache10/pen/xoLPgY</a>
+							<a href="https://codepen.io/Garache10/pen/xoLPgY">Aquí hay un ejemplo...</a>
 						</div>
 					</figure>
 				<p>También se puede combinar múltiples selectores, 
@@ -86,22 +84,22 @@
 				</p>
 					<figure>
 						<div>
-							<a href="https://codepen.io/Garache10/pen/orepLK">https://codepen.io/Garache10/pen/orepLK</a>
+							<a href="https://codepen.io/Garache10/pen/orepLK">Aquí hay un ejemplo...</a>
 						</div>
 					</figure>
-				<h1>Propiedades</h1>
+				<h2>Propiedades</h2>
 				<p>Las propiedades es el nombre de los atributos que cada 
 						selector posee. Cada propiedad tiene una colección de valores posibles. Algunos son valores de texto, 
 						otros son numéricos y de valor porcentual.
 				</p>
-				<pre>
+				<pre class="code cm-s-default CodeMirror" lang="java">
 					<code>
-						body {
-							background-color: red; /* key word */
-							color: #FFFFFF; /* HEX code */
-							width: 80%; /* percentage */
-							font-size: 15pt; /* numerical value */
-						}
+						<span>body {</span>
+						<span>background-color: red; /* key word */</span>	
+						<span>color: #FFFFFF; /* HEX code */</span>	
+						<span>width: 80%; /* percentage */</span>	
+						<span>font-size: 15pt; /* numerical value */</span>	
+						<span>}</span>
 					</code>
 				</pre>
 				<h2 >Propiedades de color</h2>
@@ -110,44 +108,42 @@
 				<p>Esta propiedad establece el color de primer plano del 
 					contenido de texto de un elemento.
 				</p>
-				<pre>
+				<pre class="code cm-s-default CodeMirror" lang="java">
 					<code>
-						p {
-						color:red;
-						}
+						<span>p {</span>
+						<span>color:red;</span>
+						<span>}</span>
 					</code>
 				</pre>
 				<ul><li>background-color</li></ul>
 				<p>Esta propiedad establece el color de fondo de un 
 					elemento.
 				</p>
-				<pre>
+				<pre class="code cm-s-default CodeMirror" lang="java">
 					<code>
-						a {
-						background-color:red;
-						}
+						<span>a {</span>
+						<span>background-color:red;</span>
+						<span>}</span>
 					</code>
 				</pre>
 				<ul><li>color as a value</li></ul>
 				<p>Estas propiedades de color toman un color como su valor, 
 					y hay tres formas diferentes de definir ese color: palabra clave, un código HEX o un valor rgb.
 				</p>
-				<pre>
+				<pre class="code cm-s-default CodeMirror" lang="java">
 					<code>
-						/*palabra clave*/ 
-						body {
-						background-color: teal; 
-						}
-
-						/*código HEX*/
-						body {
-						background-color: #00CC00; /* green */
-						}
-
-						/*decimal*/
-						body {
-						background-color: rgb(0,204,0); /*same green as above*/
-						}
+						<span>/*palabra clave*/</span> 
+						<span>body {</span>
+						<span>background-color: teal;</span>
+						<span>}</span>
+						<span>/*código HEX*/</span>
+						<span>body {</span>
+						<span>background-color: #00CC00; /* green */</span>
+						<span>}</span>
+						<span>/*decimal*/</span>
+						<span>body {</span>
+						<span>background-color: rgb(0,204,0); /*same green as above*/</span>
+						<span>}</span>
 					</code>
 				</pre>
 				<p></p>
@@ -158,54 +154,54 @@
 					necesita que al momento de hacer un sitio web único, establecer una familia tipográfica para que ésta se 
 					mire igual en los diferentes navegadores.
 				</p>
-				<pre>
+				<pre class="code cm-s-default CodeMirror" lang="java">
 					<code>
-						p {
-						font-family: tims, cursive, serif;
-						}
+						<span>p {</span>
+						<span>font-family: tims, cursive, serif;</span>
+						<span>}</span>
 					</code>
 				</pre>
 				<ul><li>Tamaño de fuente</li></ul>
 				<p>El tamaño de fuente establece la escala general de su texto.</p>
-				<pre>
+				<pre class="code cm-s-default CodeMirror" lang="java">
 					<code>
-						h1 {
-						font-size: 10em;
-						}
+						<span>h1 {</span>
+						<span>font-size: 10em;</span>
+						<span>}</span>
 					</code>
 				</pre>
 				<ul><li>Peso de la fuente</li></ul>
 				<p>El peso de una fuente es el grosor de las letras.</p>
-				<pre>
+				<pre class="code cm-s-default CodeMirror" lang="java">
 					<code>
-						p {
-						font-weight: bold;
-						}
+						<span>p {</span>
+						<span>font-weight: bold;</span>
+						<span>}</span>
 					</code>
 				</pre>
 				<ul><li>Estilo de fuente</li></ul>
 				<p>La propiedad de estilo de fuente ajusta el ángulo de las letras 
 					en relación con el plano horizontal.
 				</p>
-				<pre>
+				<pre class="code cm-s-default CodeMirror" lang="java">
 					<code>
-						p {
-						font-style: italic;
-						}
+						<span>a {</span>
+						<span>font-style: italic;</span>
+						<span>}</span>
 					</code>
 				</pre>
 				<ul><li>Decoración de texto</li></ul>
 				<p>La decoración de texto agrega una línea a través de tu texto.</p>
-				<pre>
+				<pre class="code cm-s-default CodeMirror" lang="java">
 					<code>
-						p {
-						text-decoration: underline;
-						}
+						<span>p {</span>
+						<span>text-decoration: underline;</span>
+						<span>}</span>
 					</code>
 				</pre>
 				<figure>
 					<div>
-						<a href="https://codepen.io/Garache10/pen/bPrKwx">https://codepen.io/Garache10/pen/bPrKwx</a>
+						<a href="https://codepen.io/Garache10/pen/bPrKwx">Aquí hay un ejemplo...</a>
 					</div>
 				</figure>
 				<p></p>
@@ -216,23 +212,23 @@
 				</p>
 				<figure>
 					<div>
-						<a href="https://codepen.io/Garache10/pen/jjLKoO">https://codepen.io/Garache10/pen/jjLKoO</a>
+						<a href="https://codepen.io/Garache10/pen/jjLKoO">Aquí hay un ejemplo...</a>
 					</div>
 				</figure>
 				<ul><li>Border</li></ul>
 				<p>Border o borde, es el área fuera del relleno de un elemento HTML.</p>
 				<figure>
 					<div>
-						<a href="https://codepen.io/Garache10/pen/OejEed">https://codepen.io/Garache10/pen/OejEed</a>
+						<a href="https://codepen.io/Garache10/pen/OejEed">Aquí hay un ejemplo...</a>
 					</div>
 				</figure>
 				<ul><li>Margin</li></ul>
-				<p class="">Margin o margen de un elemento HTML, es el espacio en blanco que se 
+				<p>Margin o margen de un elemento HTML, es el espacio en blanco que se 
 					encuentra fuera del borde.
 				</p>
 				<figure>
 					<div>
-						<a href="https://codepen.io/Garache10/pen/WqEKov">https://codepen.io/Garache10/pen/WqEKov</a>
+						<a href="https://codepen.io/Garache10/pen/WqEKov">Aquí hay un ejemplo...</a>
 					</div>
 				</figure>
 					<a href="https://www.w3schools.com/Css/">Más información sobre CSS...</a>
