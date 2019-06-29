@@ -1,8 +1,7 @@
+/*Etiqutas del sidenav*/
+
 body {
-    font-family: "Lato", sans-serif;
     background-color: white;
-    margin-left: 50px;
-    margin-right: 50px;
   }
   
   .sidenav {
@@ -88,7 +87,8 @@ h1{
   font-size: 2em;
   font-weight: bold;
   color: black;
-  margin-left: 270px;
+  text-align: center;
+  background: #11C1A3;
 }
 
 h2{
@@ -132,70 +132,16 @@ footer p{
   font-size: 1.2em;
   font-weight: 600;
   color: #0C0C0E;
-  margin-left: 400px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
   'Helvetica Neue', sans-serif;
+  text-align: center;
 }
 
 main p{
   margin-left: 500px;
 }
 
-/*Etiquetas de texto del resto de documentos
-h1{
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 2em;
-  font-weight: bold;
-  color:white;
-  margin-left: 270px;
-}
-
-h2{
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 1.5em;
-  font-weight: 700;
-  color:white;
-  margin-left: 10px;
-}
-
-h3{
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 1.2em;
-  font-weight: 400;
-  color:white;
-  margin-left: 10px;
-}
-
-p{
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 1em;
-  font-weight: 300;
-  color: white;
-  margin-left: 25px;
-  margin-right: 25px;
-  text-align: justify;
-}
-
-header{
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 1em;
-  font-weight: 300;
-  color: white;
-  text-align: justify;
-}
-
-
-
-code{
-  color: gray;
-  font-style: italic;
-  background-color: #f0f0f0;
-  border-width: .1em .1em .1em .8em;
-  padding: .2em .6em;
-  font-weight: bold;
-}
-
-*/
+/*Etiquetas del resto de documentos*/
 
 img{
   display: block;
@@ -203,9 +149,83 @@ img{
 }
 
 h1.h1css{
-  font-family: 'Courier New', Courier, monospace;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+  'Helvetica Neue', sans-serif;
   font-size: 2em;
   font-weight: bold;
   color: black;
   margin-left: 450px;
 }
+
+th{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+  'Helvetica Neue', sans-serif;
+  font-size: 1em;
+  font-weight: 900;
+  color: black;
+}
+
+td{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+  'Helvetica Neue', sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  color: black;
+}
+
+h3{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+  'Helvetica Neue', sans-serif;
+  font-size: 1.2em;
+  font-weight: 600;
+  color:black;
+  margin-left: 10px;
+}
+
+h4{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+  'Helvetica Neue', sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  color: black;
+}
+
+a{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+  'Helvetica Neue', sans-serif;
+  font-size: 1em;
+  color: black;
+}
+
+/*codigo de las etiqueta code*/
+
+code, pre.code{
+  background: rgb(212, 212, 212);
+}
+
+pre.code{
+  font-family: Menlo, "Fira Code", Monaco, Consolas, "Courier New", monospace;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  text-align: left;
+  /*padding: 5px;*/
+  overflow: auto;
+}
+
+.CodeMirror{
+  height: auto;
+  position: relative;
+  color: rgb(0, 0, 0);
+  direction: ltr;
+}
+
+pre{
+  margin-top: 0px;
+  margin-bottom: 1rem;
+  display: block;
+  white-space: pre;
+  margin: 1em 0px;
+}
+
+/*CodePen*/
+
