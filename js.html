@@ -1,0 +1,600 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Fundamentos</title>
+</head>
+
+<!-- <div class="tableOfContent">
+    <div class="tbch1"><a href="#h1"></a></div>
+        <div class="tbch2"><a href="#h2"></a></div>
+            <div class="tbch3"><a href="#h3"></a></div>
+</div> -->
+
+<body>
+        
+    <div class="tableOfContent">
+        <div class="tbch1"><a href="#h1Variables">Variables</a></div>
+            <div class="tbch2"><a href="#h2Alcance">Alcance</a></div>
+                <div class="tbch3"><a href="#h3Js5">Js 5</a></div>
+                <div class="tbch3"><a href="#h3Js6">Js6</a></div>  
+            <div class="tbch2"><a href="#h2Datosprimitivos">Datos primitivos</a></div>  
+            <div class="tbch2"><a href="#h2Operadores">Operadores</a></div>  
+            <div class="tbch2"><a href="#h2Strings">Strings</a></div>  
+                <div class="tbch3"><a href="#h3Escaparcaracteres">Escapar caracteres</a></div>
+                
+        <div class="tbch1"><a href="#h1Objetos">Objetos</a></div>
+            <div class="tbch2"><a href="#h2Singleton">Singleton</a></div>  
+
+        <div class="tbch1"><a href="#h1Arreglos">Arreglos</a></div>
+        
+        <div class="tbch1"><a href="#h1Funciones">Funciones</a></div>
+            <div class="tbch2"><a href="#h2Callbacks">Callbacks</a></div>  
+
+        <div class="tbch1"><a href="#h1Consolelog">Console log</a></div>
+        
+        <div class="tbch1"><a href="#h1Api">API</a></div>
+            <div class="tbch2"><a href="#h2Dom">DOM</a></div>
+            <div class="tbch2"><a href="#h2Htmltablejavascript">HTML Table JavaScript</a></div>
+            
+        <div class="tbch1"><a href="#h1Operadoreslogicos">Operadores logicos</a></div>
+            <div class="tbch2"><a href="#h2Operadorescomparacion">Operadores de comparacion</a></div>
+            <div class="tbch2"><a href="#h2Diferenciaentre3igual2igual">Diferencia entre == y === en JavaScript</a></div>
+            <div class="tbch2"><a href="#h2Igual">Igual(==)</a></div>
+            <div class="tbch2"><a href="#h2Igualestricto">Igual estricto(===)</a></div>
+            <div class="tbch2"><a href="#h2If">If</a></div>
+            <div class="tbch2"><a href="#h2Ifelse">If else</a></div>
+            
+            
+        <div class="tbch1"><a href="#h1Operadoresiterativos">Operadores Iterativos</a></div>
+                <div class="tbch2"><a href="#h2Switch">Switch</a></div>
+                <div class="tbch2"><a href="#h2While">While</a></div>
+                <div class="tbch2"><a href="#h2Dowhile">Do while</a></div>
+                <div class="tbch2"><a href="#h2For">For</a></div>
+                <div class="tbch2"><a href="#h2Forin">For in</a></div>
+
+        <div class="tbch1"><a href="#h1Eventos">Eventos</a></div>
+        
+    </div>
+
+    
+    <div id="variables">
+        <h1 id="h1Variables"  >Variables</h1>
+    
+            <p>
+                Es un lenguaje débilmente tipado, lo que significa que solo hay una forma de declarar una variable. Debido a esto ellas son case sensitive, lo que quiere decir que no es lo mismo 'comida' que 'Comida' o 'COMIDA'.
+                Los nombres reservados no pueden ser usados como variables, los estudiaremos en todo el blog.
+                Solo pueden iniciar con los siguientes caracteres: "$", "_", "a" to "z", or "A" to "Z".
+                Es preferible utilizar la notación camelCase, donde la primera letra debe de ser minúscula, y cuando haya un cambio entre palabras, por ejemplo camer a case, la segunda palabra iniciará con mayúscula, y así sucesivamente en caso de que haya más de una palabra.
+            </p>
+    
+            <pre class="codejs">
+                <code>
+    //forma 1
+    var x;
+    var myNumber1, myNumber2 = 34, myNumber3;
+    //forma 2
+    let x;
+    let x = 1, y = 3, z = 12;
+                </code>
+            </pre>
+    
+            <strong>Constantes</strong></p>
+            <p>
+                Se definen escribiendo el identificador todo en MAYUSCULAS o usando la palabra reservada *const*
+            </p>
+    
+            <pre class="codejs">
+                <code>
+    //forma 1
+    var TIME_LIMIT;
+    //forma 2
+    const MAX_GRADE = 20;
+                </code>
+            </pre>
+    
+            <h2 id="h2Alcance"  >Alcance</h2>
+                <h3 id="h3Js5"  >Js 5</h3>
+                    <p>
+                        <strong>Variables globales</strong><br>
+                        Son declaradas fuera de las funciones y pueden ser usadas en cualquier lado<br>
+                        <strong>Variables locales</strong><br>
+                        Son declaradas dentro de las funciones y solo pueden ser usadas dentro de ellas, en el caso de que haya una variable global con el mismo nombre, la variable local tienen prioridad, ellas son locales de la función, no del bloque de código como en otros lenguajes como C# o Java
+                    </p>
+                    <pre class="codejs">
+                        <code>
+    var a = 1;//variable global
+    function f() {
+        
+        for (var i = 0; i &lt; 9; i++) {
+            a += i;//en otros lenguajes la i seria local al for, pero en js no
+        }
+    }
+                        </code>
+                    </pre>
+                    <p>
+                        Podemos declarar variables sin las palabras var/let pero si lo hacemos dentro de la función entonces será global.
+                    </p>
+                    <pre class="codejs">
+                        <code>
+    var a;//global
+    x = 1;//global
+    function f3() {
+    y = 2;//global
+        var z = 3;//local
+    }
+                        </code>
+                    </pre>
+                
+                <h3 id="h3Js6"  >Js 6</h3>
+                    <p>
+                        <strong>let para variables, const para constantes</strong><br>
+
+                    </p>
+                    <h2 id="h2Datosprimitivos"  >Datos primitivos</h2>
+                    <p>
+                        <strong>Number: </strong> 1,2,105,3.14 ...<br>
+                        Si inicias con una n, JavaScript interpretará que es un número octal.<br>
+                        NaN, no es un número.<br>
+                        <strong>+Infinity</strong>, infinitos positivos<br>
+                        <strong>-Infinity</strong>, infinitos negativos<br>
+                        <strong>String:</strong> 'a'<br>
+                        <strong>string:</strong> 'a', "one", 'two' , 'World Wide Web' ...<br>
+                        <strong>boolean:</strong> true / false<br>
+                        <strong>undefined:</strong> No existe o valor desconocido<br>
+                        <strong>null:</strong> Sin valor o vacío, la diferencia con undefined es que cuando una variable es null, realmente está definida<br><br>
+
+                        Todo lo que no se listo arriba es un<strong> Objeto</strong>
+                    </p>
+
+            <h2 id="h2Operadores">Operadores</h2>
+                <p>
+                    <strong>Aritméticos binarios<br></strong>
+                    +, - , /, *, % (módulo)<br>
+                    <strong>Unitarios<br></strong>
+                    ++, —, -<br>
+                    <strong>Sufijo</strong>, añade 1 al valor de la variable, regresa el valor antiguo<br>
+                    <strong>Prefijo</strong>, añade 1 al valor de la variable, regresa el mismo valor
+                    <pre class="codejs">
+                        <code>
+    a += 3; // equivale a = a + 3
+    a -= 2; // equivale a = a - 2
+                        </code>
+                    </pre>
+                </p>
+            
+            <h2 id="h2Strings"  >Strings</h2>
+                <p>
+                    Se declaran entre "" ó '', si inicia con " debe terminar con ", igual en el caso de ', es recomendado usar ' porque:
+                    <ul>
+                        <li>"" es usado en html</li>
+                        <li>Debes presionar Shift para escribir "</li>
+                        <li>Más fáciles de leer y escribir</li>
+                        <li>Para escribir htmll en js, ' son más útiles</li>
+                    </ul>
+                    <br>
+                    <strong>Operaciones con cadenas</strong>
+                    <ul>
+                        <li>+ concatenar</li>
+                        <li>+= concatenar, funciona igual que con números</li>
+                        <li>concat(), concatenar</li>
+                        <li>si se guarda un número en la cadena, Js lo convertirá a number</li>
+                        <li>convertir número a cadena</li>
+                        <pre class="codejs">
+                            <code>
+    ar n = 1;
+    typeof n;
+    // returns "number"
+    n = "" + n;
+    // returns "1"
+    typeof n;
+    // returns "string"
+                            </code>
+                        </pre>
+                    </ul>
+                </p>
+            
+                <h3 id="h3Escaparcaracteres"  >Escapar caracteres</h3>
+                <p>
+                    Para "escapar" carácteres
+                </p>
+                <pre class="codejs">
+                    <code>
+    var s = 'I don\'t know';
+    var s = "I don\'t know"; // aqui el \ es inservible
+    var s = "I don't know";  // mismo resultado que la linea anterior
+    var s = '"Hello", he said.'; // ok, comillas dobles dentro de comilla simples van a ser mstradas
+    var s = "\"Hello\", he said."; // comillas dobles dentro de comillas dobles necesitan ser escapadas
+    var s = "1\\2"; s;
+    // retorna "1\2"
+                    </code>
+                </pre>
+                <p>
+                    \n para nueva línea
+                </p>
+                <pre class="codejs">
+                    <code>
+    var s = '\n1\n2\n3\n';
+    s
+    // retorna "
+    1
+    2
+    3
+    "
+                    </code>
+                </pre>
+                <p>
+                    \n para carriage returnt
+                </p>
+                <pre class="codejs">
+                    <code>
+    var s = '1\r2';
+    var s = '1\n\r2';
+    var s = '1\r\n2';
+    // las tres lineas anteriores dan :
+    "1
+    2"
+                    </code>
+                </pre>
+                <p>
+                    \t para tabulación
+                </p>
+                <pre class="codejs">
+                    <code>
+    var s = "1\t2"
+    // s es igual a
+    "1 2"
+                    </code>
+                </pre>
+            
+    </div>
+
+    <div id="objetos">
+        <h1 id="h1Objetos">Objetos</h1>
+            <p>
+                Son declarados entre {}<br>
+                En el siguiente ejemplo <strong>givenName</strong> y <strong>familyName</strong> son propiedades, y Michel y Buffa sus valores
+            </p>
+            <pre class="codejs">
+                    <code>
+    var p = {givenName:'Michel', familyName: 'Buffa'}
+                    </code>
+                </pre>
+            <p>
+                Se usa <strong>.</strong> para acceder a las propiedades del método. Los arreglos también son objetos pero son objetos especiales y los veremos más en detalle más adelante.
+            </p>
+
+                <h3 id="h2Singleton">Objetos singleton</h3>
+                    <p>
+                        Son los objetos que guardan propiedades
+                    </p>
+                    <pre class="codejs">
+                            <code>
+    var student1 = {
+        fullName:'John Doe',
+        age: 23,
+        city: 'New York',
+        ssn: "11-22-33-44" // sin coma en la ultima propiedad
+    }
+                            </code>
+                        </pre>
+        }</code></pre>
+
+    </div>
+        
+    <div id="arreglos">
+        <h1 id="h1Arreglos"  >Arreglos</h1>
+        <ul>
+            <li>Se declaran usando []</li>
+            <li>Se acceden a ellos a través de índices, siendo el primer elemento el 0</li>
+            <li>Para saber el tamaño usar lenght</li>
+            <li>Para añadir un elemento usar push()</li>
+        </ul>
+    </div>
+    <div id="funciones">   
+        <h1 id="h1Funciones"  >Funciones</h1>
+            <ul>
+                <li>Tienen un nombre</li>
+                <li>Es una agrupación de códigos</li>
+                <li>Retornan un valor</li>
+                <li>Tienen parámetros</li>
+            </ul>
+            <p>
+                Hay funciones que pueden tener un número variable de parámetros. Para esto usamos el arreglo arguments, el cuál es creado automáticamente por Javascript en todas las funciones
+            </p>
+            <pre class="codejs">
+                    <code>
+    function newSum() {
+        var i, res = 0;
+        var numeroDeParametros = arguments.length;
+        for (i = 0; i < numeroDeParametros; i++) {
+            res += arguments[i];
+        }
+        return res;
+    }
+    ...
+    >>> newSum(1, 1, 1);
+    3
+    >>> newSum(1, 2, 3, 4);
+    10
+                    </code>
+            </pre>
+            <p>
+
+            </p>
+            <p>
+                Cómo declararlas
+            </p>
+            <pre class="codejs">
+                    <code>
+    //declarada normal
+    function functionName(parameters) {
+    // code to be executed
+    }
+    
+    //llamada
+    functionName(parameters);
+                    </code>
+                </pre>
+                <p>
+                    Declarada con variable
+                </p>
+                <pre class="codejs">
+                        <code>
+    //declarada con variable
+    var sum = function(a, b) {
+        return (a + b);
+    };
+    
+    var displayInPage = function(message, value) {
+        // this function does not return anything
+        document.body.innerHTML += message + value + "<br>";
+    };
+    
+    var result = sum(3, 4);
+    displayInPage("Result: ", result);
+    
+    // we could have written this
+    displayInPage("Result: ", sum(10, 15));
+                        </code>
+                    </pre>
+        
+            <h2 id="h2Callbacks"  >Callbacks</h2>
+            <p>
+                Funcioones que son pasadas como argumentos a la misma función, esto es muy usado en los event listener.
+            </p>
+            <pre class="codejs">
+                    <code>
+    / Anadir un click event listener a todo el documento
+    // la funcion  processClick es un callback:
+    // una funcion llamada por el navegador cuando un evento de click es detectado
+    // is detected
+    window.addEventListener('click', processClick);
+    
+    function processClick(event) {
+        document.body.innerHTML += "Button clicked<br>";
+    }
+    
+    // Podriamos haber escrito esto, con el cuerpo de el callback como un argumento de la funcion addEventListener 
+    window.addEventListener('click', function(evt) {
+        document.body.innerHTML += "Button clicked version 2<br>";
+    });
+                    </code>
+                </pre>
+                <p>
+                    Las funciones lógicas están derivadas desde el paradigma de programación funcional. Son muy comunes en Javascript
+                </p>
+    </div>
+
+
+    <div id="operadoreslogicos">
+        
+        <h1 id="h1Operadoreslogicos"  >Operadores lógicos</h1>
+        <p>
+            <strong>Valores booleanos</strong>, son verdadero o falso, true or false.<br>
+            <strong>Valor indefinido y null</strong>, retorna undefined cuando una varable no ha sido asignada
+            <ul>
+                <li>&&(AND)</li>
+                    if ((x > 0) && (x < 10)) {  console.log('x tiene que ser extrixtamente positivo y menor que 10');  }
+                <li>||(OR)</li>
+                    if ((x > 0) || (x == -5)) {  console.log('x es positivo o igual a  -5');  }
+                <li>!(NOT)</li>
+                    if (!(x > 0)) {  console.log('x no es positivo (x es menor o igual a  0');  }
+            </ul>
+            <strong>&&, || son operadores binarios, ! is unitario.</strong><br>
+            Todos los valores siguientes son evaluados como falso
+            <ul>
+                <li>false</li>
+                <li>undefined</li>
+                <li>null</li>
+                <li>0</li>
+                <li>NaN</li>
+                <li>Las cadenas vacias ""</li>
+            </ul>
+        </p>
+        
+            <h2 id="h2Operadorescomparacion"  >Operadores de comparación</h2>
+            <ul>
+                <li>Igual ==</li>
+                <li>No igual !=</li>
+                <li>Mayor que ></li>
+                <li>Mayor o igual que >=</li>
+                <li>Menor que <</>
+                <li>Menor o igual que <=</li>
+                <li>Estrictamente igual ===</li>
+                <li>Strictamente no igual !==</li>
+            </ul>
+            <h3 id="h2Diferenciaentre3igual2igual"  >¿Cuál es la diferencia entre igual y estrictamente igual?</h3>
+                <p>
+                    
+                    <strong>Igual(==)</strong><br>
+                    Retorna igual si el operador es estrictamente igual con el tipipo de conversión<br>
+                    <strong>Esctrictamente igual(===)</strong><br>
+                    Retorna verdadero si el operador es estrictamente igual sin conversión de tipo, este operador nunca hace referencia de tipo. Retorna verdadero únicamente si ambos operadores hacen referencia al mismo objeto, o si en el caso de valores de tipo, tienen el mismo valor.
+                    <pre class="codejs">
+                        <code>
+    1 == 1 ;
+    //true
+        
+    1 == 2 ;
+    //false
+        
+    /* Aqui, el interpretador va a intentar convertir la cadena '1' a un numero antes de hacer la comparacion */
+        
+    1 == '1';
+    //true :
+        
+        
+    //con estrictamente igual no hay conversion:
+        
+    1 === 1;
+    //true
+    1 === '1';
+    //false
+                        </code>
+                    </pre>
+                    Dependiendo del contexto, generalmente estrictamente igual es preferido.
+                    Buenas prácticas para novatos: siempre usar === o !== para comparación.
+                </p>
+        
+        <h2 id="h2If"  >If</h2>
+    <pre class="codejs">
+        <code>
+    var hora = 10;
+    if (hora = 10) {
+        console.log("Son las 10");
+        }
+        </code>
+    </pre>
+        
+        <h2 id="h2Ifelse"  >if else</h2>
+        <pre class="codejs">
+            <code>
+    var max;
+    var min = 2;
+        
+    if (min < 10) {
+        max = min + 10;
+    } else {
+        max = min;
+    }
+            </code>
+        </pre>
+
+        <h2 id="h2Switch"  >switch</h2>
+        
+        <pre>
+            <code>
+    switch (expression) {
+    case value1:
+        statement
+        break;       // break can be omitted in that case
+                        // the second test case will be executed
+                        // most of the time we add a break; at the end
+                        // of a "case"
+    
+    case value2:
+        statement
+        break;
+    
+    case value3:
+        statement
+        break;
+    
+    default:         // if no case tested true
+        statement
+        break;
+        }
+            </code>
+        </pre>
+    </div>
+
+    <div id="operadoresiterativos">
+        <h1 id="h1Operadoresiterativos"  >Operadores iterativos</h1>
+        
+        <p>
+            Se usa cuando se quiere ejecutar el mismo bloque de código varias veces mientras una condición sea satisfecha.</p>
+            
+            <h3 id="h2While"  >while</h3>
+            <pre>
+                <code>
+    var i = 1, j = 1;
+
+    while ( i  < 4 ) {
+        j += i;
+        i += 1; 
+    }
+    ...
+                </code>
+            </pre>
+            <h3 id="h2Dowhile"  >do while</h3>
+            <pre>
+                <code>
+    var i = 0;
+             
+            do {
+                console.log('i = ' + i);
+                i++;
+            } while(i < 20);
+             
+            console.log('Valor de i despues del do-while' + i);
+                </code>
+            </pre>
+            <p>
+                El do-while ejecuta el contenido del loop una vez antes de verificar la condición del while, mientras que el while va a ejecutar primero la condición antes de ejecutar el bloque de código
+            </p>
+            <h3 id="h2For"  >for</h3>
+            <pre>
+                <code>
+    for (var i = 0; i <= 10; i++) {
+    console.log('i = 'i = 'j = '; + j);
+    }
+                </code>
+            </pre>
+            <p>
+                Podemos tener más de una instrucción en la inicializacioón, y tambiéon en la parte de la incrementación
+            </p>
+            <pre>
+                <code>
+    for (var i = 1, j = 1; i &lt;= 10; i++, j+=2) {
+    console.log(&#x27;i = &#x27; + i + &#x27; j = &#x27; + j);
+    }
+                </code>
+            </pre>
+            <h3 id="h2Forin"  >for in</h3>
+            <p>
+                El for-in es usado para iterar a través de un objeto(o de un arreglo, que también es un objeto).
+            </p>
+            <pre>
+                <code>
+                var michel = {              // michel is an object
+                familyName:&#x27;Buffa&#x27;,     // familyName, givenName, age
+                                        // are its properties
+                givenName: &#x27;Michel&#x27;,
+                age: 51
+            }
+             
+            for(var property in michel) {   // the for-in will
+                                            // enumerate properties
+                console.log(property);      // will print "familyName",
+                                            // "givenName",
+                                            // "age"
+                console.log(michel[property]);  // michel[&#x27;givenName&#x27;] same 
+                                                // as michel.givenName
+            }</code></pre>
+    </div>
+
+    <div id="eventos">
+        <h1 id="h1Eventos"  >Eventos</h1>
+        
+        <p>
+            Sin embargo, realizar una acción específica cuando se hace clic en el botón, saber qué botón del mouse se ha utilizado, calcular la posición del puntero del mouse (x, y) en la coordenada del sistema del botón o ejecutar tareas más complejas solo se puede realizar a través de JavaScript.<br>
+            Con JavaScript, un clic de botón, un movimiento del mouse, una ventana redimensionada y muchas otras interacciones crean lo que se denominan "eventos". El tiempo y el orden de los eventos no se pueden predecir por adelantado. Decimos que el "procesamiento de eventos" es asíncrono. Los navegadores web detectan eventos a medida que ocurren y pueden pasarlos al código JavaScript. Lo hacen permitiéndole registrar funciones como escuchas de eventos, también llamados controladores o devoluciones de llamada para eventos específicos.<br>
+            Cada vez que ocurre un evento, el navegador lo coloca en una "cola de eventos".Luego, el navegador mira una lista de "Oyentes de eventos" y llama a los que corresponden al tipo de evento que "escuchan".
+        </p>
+    </div>
+    
+
+</body>
+
+</html>
